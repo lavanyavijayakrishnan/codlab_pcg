@@ -141,14 +141,14 @@ def data_generator(descriptions, photos, tokenizer, max_length, vocab_size):
 			yield [[in_img, in_seq], out_word]
 
 # load training dataset (6K)
-filename = 'Flicker8k_text/Flickr_8k.trainImages.txt'
+filename = 'codlab_pcg/Flicker8k_text/Flickr_8k.trainImages.txt'
 train = load_set(filename)
 print('Dataset: %d' % len(train))
 # descriptions
-train_descriptions = load_clean_descriptions('descriptions.txt', train)
+train_descriptions = load_clean_descriptions('codlab_pcg/descriptions.txt', train)
 print('Descriptions: train=%d' % len(train_descriptions))
 # photo features
-train_features = load_photo_features('features.pkl', train)
+train_features = load_photo_features('codlab_pcg/features.pkl', train)
 print('Photos: train=%d' % len(train_features))
 # prepare tokenizer
 tokenizer = create_tokenizer(train_descriptions)
