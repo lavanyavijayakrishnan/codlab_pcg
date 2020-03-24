@@ -138,10 +138,10 @@ filename = 'codlab_pcg/Flicker8k_text/Flickr_8k.trainImages.txt'
 train = load_set(filename)
 print('Dataset: %d' % len(train))
 # descriptions
-train_descriptions = load_clean_descriptions('descriptions.txt', train)
+train_descriptions = load_clean_descriptions('codlab_pcg/descriptions.txt', train)
 print('Descriptions: train=%d' % len(train_descriptions))
 # photo features
-train_features = load_photo_features('features.pkl', train)
+train_features = load_photo_features('codlab_pcg/features.pkl', train)
 print('Photos: train=%d' % len(train_features))
 # prepare tokenizer
 tokenizer = create_tokenizer(train_descriptions)
@@ -160,10 +160,10 @@ filename = 'codlab_pcg/Flicker8k_text/Flickr_8k.devImages.txt'
 test = load_set(filename)
 print('Dataset: %d' % len(test))
 # descriptions
-test_descriptions = load_clean_descriptions('descriptions.txt', test)
+test_descriptions = load_clean_descriptions('codlab_pcg/descriptions.txt', test)
 print('Descriptions: test=%d' % len(test_descriptions))
 # photo features
-test_features = load_photo_features('features.pkl', test)
+test_features = load_photo_features('codlab_pcg/features.pkl', test)
 print('Photos: test=%d' % len(test_features))
 # prepare sequences
 X1test, X2test, ytest = create_sequences(tokenizer, max_length, test_descriptions, test_features, vocab_size)
