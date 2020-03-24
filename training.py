@@ -134,7 +134,7 @@ def define_model(vocab_size, max_length):
 # train dataset
  
 # load training dataset (6K)
-filename = 'Flicker8k_text/Flickr_8k.trainImages.txt'
+filename = 'codlab_pcg/Flicker8k_text/Flickr_8k.trainImages.txt'
 train = load_set(filename)
 print('Dataset: %d' % len(train))
 # descriptions
@@ -156,7 +156,7 @@ X1train, X2train, ytrain = create_sequences(tokenizer, max_length, train_descrip
 # dev dataset
  
 # load test set
-filename = 'Flicker8k_text/Flickr_8k.devImages.txt'
+filename = 'codlab_pcg/Flicker8k_text/Flickr_8k.devImages.txt'
 test = load_set(filename)
 print('Dataset: %d' % len(test))
 # descriptions
