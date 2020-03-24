@@ -134,7 +134,7 @@ def define_model(vocab_size, max_length):
 # train dataset
  
 # load training dataset (6K)
-filename = 'Flickr8k_text/Flickr_8k.trainImages.txt'
+filename = 'Flicker8k_text/Flickr_8k.trainImages.txt'
 train = load_set(filename)
 print('Dataset: %d' % len(train))
 # descriptions
